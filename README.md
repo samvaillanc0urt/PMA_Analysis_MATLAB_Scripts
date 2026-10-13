@@ -1,4 +1,4 @@
-# Lab_Analysis_SV
+# PMA_Analysis_MATLAB_Scripts
 
 MATLAB pipeline for **platform-mediated avoidance (PMA)** in mice. It takes behavior-rig video through pose tracking to per-tone platform and reward-zone behavior, then to a group Excel workbook and PDF reports. It also analyzes TDT fiber photometry. It was built for TMS vs. sham cohorts.
 
