@@ -219,7 +219,7 @@ defaults = struct();
 
 % Where the folder browser (inside the settings window) starts. You still
 % pick the actual folder there, so this only has to be close.
-defaults.startingFolder = 'C:\Users\boba4\Desktop\Sam V';
+defaults.startingFolder = pwd;
 
 % Video settings.
 defaults.resolution = '640x480';   % size of the video itself; the info panel adds height on top
@@ -452,7 +452,7 @@ function preprocess_video_engine(varargin)
 %  pair overrides the matching line below, so both ways of working still
 %  behave the same.
 
-CFG.root = 'C:\Users\boba4\Desktop\Sam V\2026-08-20_PVcre.Fp_PMA_TMS';
+CFG.root = pwd;
 
 % SV, August 25, 2026: I added
 % SAFETY GATE: shows a window listing every file that will be created, every

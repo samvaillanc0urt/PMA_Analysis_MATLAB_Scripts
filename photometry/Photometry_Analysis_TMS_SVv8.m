@@ -1,5 +1,5 @@
-%% Photometry_Analysis_TMS_GroupSummary_SVv1.m
-% SV Sep 2026 (SV / Claude). New script -- not a versioned edit of
+%% Photometry_Analysis_TMS_SVv8.m
+% SV Sep 2026 (SV / Claude). Started as Photometry_Analysis_TMS_GroupSummary_SVv1.m. New script -- not a versioned edit of
 % Photometry_Analysis_TMS_SVv6.m, because the scope is different (raw
 % folder organization + a group-level tms-vs-sham summary report,
 % instead of one QC PDF per processing stage).
@@ -29,7 +29,7 @@
 %   5. Show a dry-run rename plan (old folder -> new
 %      "<SUBJ>_<Group><SessionNum>_SV_<MonDD>" folder, grouped under
 %      "<Group><SessionNum>\", matching the PMA <group>_<Day> convention
-%      -- see E:\PMA_Dataset_Layout.md) and, only after you confirm, moves
+%      -- see docs/data_layout.md) and, only after you confirm, moves
 %      the folders and writes a manifest CSV so the reorg is reversible.
 %   6. For each subject/session/channel: loads the TDT block, subtracts
 %      the isosbestic-fit from the signal channel (standard 405/415

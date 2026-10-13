@@ -1,0 +1,20 @@
+# MATLAB autosave / editor files
+*.asv
+*.m~
+# Python cache
+__pycache__/
+*.pyc
+# Keep data out of the code repo
+*.mat
+*.mp4
+*.avi
+*.h5
+*.tev
+*.tsq
+*.tbk
+*.tdx
+*.tin
+*.tnt
+*.sev
+# ffmpeg build dropped into the repo for step 1
+ffmpeg*/

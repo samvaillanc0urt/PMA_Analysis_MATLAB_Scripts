@@ -1,3 +1,17 @@
+%% calcCueFrames_batch_SVv4.m - convert rig cue times to video frame numbers
+%
+% Pick a dataset root; every session folder below it is listed. For each
+% ticked session, the rig .mat's cue timestamps (ts.csp_*, ts.csm_*,
+% ts.us_*, ts.laser_*) are converted to video frames,
+%   frame = (cue time - ts.camera_on) x video frame rate,
+% and written as N x 2 [onset offset] tables with no header:
+%   <session folder>_csp_cue_frames.csv   (+ _csm_, _us_, _laser_ if present)
+% The same frames are appended to the .mat as cueframes (plus NumFrames).
+%
+% Needs exactly one .mat and one video (.avi, else .mp4) per session folder.
+% Run after organizing folders, before BehaviorDEPOT (which imports the
+% csp file as the "CSp" event).
+
 % Params
 doCSV = 1;  % 0 or 1, save to csv
 % fps = 49.965; % load fps, leave blank to autoload
@@ -388,7 +402,7 @@ end
 % SV / Claude, September 1, 2026: I added - the three functions below (down
 % to the end of the file). They give calcCueFrames the same two-window
 % "pick a folder, then tick which sessions to run" flow that
-% preprocess_pma_videos_SVv3.m uses, built the same way (plain uicontrol
+% preprocess_pma_videos_SVv4.m uses, built the same way (plain uicontrol
 % figures, not App Designer) so it needs nothing this script didn't already
 % depend on.
 
